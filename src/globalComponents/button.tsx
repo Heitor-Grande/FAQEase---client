@@ -6,7 +6,8 @@ interface ButtonComponente {
     size: "small" | "medium" | "large"
     icone: React.ReactNode,
     color: "error" | "info" | "inherit" | "primary" | "secondary" | "success" | "warning"
-    style?: React.CSSProperties
+    style?: React.CSSProperties,
+    type: "reset" | "button" | "submit"
 }
 function ButtonComponente({
     variant,
@@ -15,10 +16,11 @@ function ButtonComponente({
     size,
     icone,
     color,
-    style
+    style,
+    type
 }: ButtonComponente) {
     return (
-        <Button style={style} color={color} disabled={disabled} size={size} variant={variant} startIcon={icone}>
+        <Button type={type} style={style} color={color} disabled={disabled} size={size} variant={variant} startIcon={icone}>
             {texto}
         </Button>
     )

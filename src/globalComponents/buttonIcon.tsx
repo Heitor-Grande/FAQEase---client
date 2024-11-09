@@ -3,16 +3,18 @@ interface ButtonIcon {
     icone: React.ReactNode,
     color: "error" | "info" | "inherit" | "primary" | "secondary" | "success" | "warning",
     size: "small" | "medium" | "large",
-    disabled: boolean
+    disabled: boolean,
+    type: "reset" | "button" | "submit"
 }
 function ButtonIcon({
     icone,
     color,
     size,
-    disabled
+    disabled,
+    type
 }: ButtonIcon) {
     return (
-        <IconButton disabled={disabled} color={color} size={size}>
+        <IconButton type={type} disabled={disabled} color={color} size={size}>
             {icone}
         </IconButton>
     )

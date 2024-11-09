@@ -9,11 +9,8 @@ import Footer from "../../globalComponents/footer";
 import InputPadrao from "../../globalComponents/inputPadrao";
 import { useState } from "react";
 import formulario from "./interfaces/formulario";
+import SendIcon from '@mui/icons-material/Send';
 function Home() {
-    const styleEmailFormulario: React.CSSProperties = {
-        width: "100%",
-        color: "white"
-    }
     const [formulario, setFomulario] = useState<formulario>({
         nome: "",
         email: "",
@@ -46,6 +43,7 @@ function Home() {
                                     <div className="col-md-4 mb-4">
                                         <div className="card bg-preto text-white">
                                             <ButtonIcon
+                                                type="button"
                                                 icone={<InsightsIcon />}
                                                 color="inherit"
                                                 size="large"
@@ -54,6 +52,7 @@ function Home() {
                                             <div className="card-body">
                                                 <h5 className="card-title text-center">BOT para o seu comércio via WhatsApp</h5>
                                                 <ButtonComponente
+                                                    type="button"
                                                     variant="contained"
                                                     texto="Saiba Mais"
                                                     disabled={false}
@@ -68,6 +67,7 @@ function Home() {
                                     <div className="col-md-4 mb-4  d-inline-block h-100">
                                         <div className="card bg-preto text-white">
                                             <ButtonIcon
+                                                type="button"
                                                 icone={<SettingsSuggestIcon />}
                                                 color="inherit"
                                                 size="large"
@@ -76,6 +76,7 @@ function Home() {
                                             <div className="card-body">
                                                 <h5 className="card-title text-center">BOT para suporte ao cliente via WhatsApp</h5>
                                                 <ButtonComponente
+                                                    type="button"
                                                     variant="contained"
                                                     texto="Saiba Mais"
                                                     disabled={false}
@@ -90,6 +91,7 @@ function Home() {
                                     <div className="col-md-4 mb-4">
                                         <div className="card bg-preto text-white">
                                             <ButtonIcon
+                                                type="button"
                                                 icone={<PrecisionManufacturingIcon />}
                                                 color="inherit"
                                                 size="large"
@@ -98,6 +100,7 @@ function Home() {
                                             <div className="card-body">
                                                 <h5 className="card-title text-center">IA Personalizada para atendimento mais dinâmico</h5>
                                                 <ButtonComponente
+                                                    type="button"
                                                     variant="contained"
                                                     texto="Saiba Mais"
                                                     disabled={false}
@@ -116,65 +119,80 @@ function Home() {
                 </div>
             </div>
             <div className="container-fluid mt-3">
-                <div className="card">
-                    <div className="card-body">
-                        <div className="row">
-                            <div className="col-sm col-md-12 col-lg-12">
-                                <p className="text-center">Você pode entrar em contato via formulário para mais detalhes</p>
-                            </div>
+                <form action="">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="row">
+                                <div className="col-sm col-md-12 col-lg-12">
+                                    <p className="text-center">Você pode entrar em contato via formulário para mais detalhes</p>
+                                </div>
 
-                        </div>
-                        <div className="row mt-3">
-                            <div className="col-sm col-md-6 col-lg-6 m-auto">
-                                <div className="col-sm col-md-7 col-lg-7">
+                            </div>
+                            <div className="row mt-3">
+                                <div className="col-sm col-md-6 col-lg-6 m-auto">
+                                    <div className="col-sm col-md-7 col-lg-7">
+                                        <InputPadrao
+                                            size="small"
+                                            label="Nome Completo"
+                                            variant="outlined"
+                                            value={formulario.nome}
+                                            onchange={function (e) {
+                                                setValuesFormulario("nome", e)
+                                            }}
+                                            disabled={false}
+                                            color="primary"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row mt-1">
+                                <div className="col-sm col-md-6 col-lg-6 m-auto">
                                     <InputPadrao
                                         size="small"
-                                        label="Nome Completo"
+                                        label="E-mail para contato"
                                         variant="outlined"
-                                        value={formulario.nome}
+                                        value={formulario.email}
                                         onchange={function (e) {
-                                            setValuesFormulario("nome", e)
+                                            setValuesFormulario("email", e)
                                         }}
                                         disabled={false}
                                         color="primary"
                                     />
                                 </div>
                             </div>
-                        </div>
-                        <div className="row mt-1">
-                            <div className="col-sm col-md-6 col-lg-6 m-auto">
-                                <InputPadrao
-                                    size="small"
-                                    label="E-mail para contato"
-                                    variant="outlined"
-                                    value={formulario.email}
-                                    onchange={function (e) {
-                                        setValuesFormulario("email", e)
-                                    }}
-                                    disabled={false}
-                                    color="primary"
-                                />
+                            <div className="row mt-1">
+                                <div className="col-sm col-md-6 col-lg-6 m-auto">
+                                    <InputPadrao
+                                        size="small"
+                                        label="Digite aqui sua dúvida..."
+                                        variant="outlined"
+                                        value={formulario.texto}
+                                        multiline={true}
+                                        rows={10}
+                                        onchange={function (e) {
+                                            setValuesFormulario("texto", e)
+                                        }}
+                                        disabled={false}
+                                        color="primary"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="row mt-1">
-                            <div className="col-sm col-md-6 col-lg-6 m-auto">
-                                <InputPadrao
-                                    size="small"
-                                    label="Digite aqui sua dúvida..."
-                                    variant="outlined"
-                                    value={formulario.texto}
-                                    multiline={true}
-                                    rows={10}
-                                    onchange={function (e) {
-                                        setValuesFormulario("texto", e)
-                                    }}
-                                    disabled={false}
-                                    color="primary"
-                                />
+                            <div className="row mt-1">
+                                <div className="col-sm col-md-6 col-lg-6 m-auto text-end">
+                                    <ButtonComponente
+                                        variant="contained"
+                                        texto="Enviar Formulário"
+                                        disabled={false}
+                                        size="small"
+                                        color="error"
+                                        type="submit"
+                                        icone={<SendIcon />}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <Footer />
         </div>
