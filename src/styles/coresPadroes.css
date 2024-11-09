@@ -1,0 +1,49 @@
+/* BACKGROUNDS */
+.bg-cinza {
+    background-color: #4e4d4a;
+}
+
+.bg-preto {
+    background-color: #353432;
+}
+
+.bg-verde {
+    background-color: #94ba65;
+}
+
+.bg-azulclaro {
+    background-color: #2790b0;
+    transition: 1s;
+}
+
+.bg-azulescuro {
+    background-color: #2b4e72;
+}
+
+/* FONTS COLOR */
+
+.font-cinza {
+    color: #4e4d4a;
+}
+
+.font-preto {
+    color: #353432;
+}
+
+.font.verde {
+    color: #94ba65;
+}
+
+.font-azulclaro {
+    color: #2790b0;
+}
+
+.bg-azulescuro {
+    color: #2b4e72;
+}
+
+/* HOVERS */
+.bg-azulclaro:hover{
+    background-color: #2b4e72;
+    transform: scaleX(1.25)
+}
