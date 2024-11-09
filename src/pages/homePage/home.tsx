@@ -40,55 +40,7 @@ function Home() {
                                 <br />
                                 <h2 className="text-center mb-4"><b>Nossas Automatizações</b></h2>
                                 <div className="row">
-                                    <div className="col-md-4 mb-4">
-                                        <div className="card bg-preto text-white">
-                                            <ButtonIcon
-                                                type="button"
-                                                icone={<InsightsIcon />}
-                                                color="inherit"
-                                                size="large"
-                                                disabled={false}
-                                            />
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">BOT para o seu comércio via WhatsApp</h5>
-                                                <ButtonComponente
-                                                    type="button"
-                                                    variant="contained"
-                                                    texto="Saiba Mais"
-                                                    disabled={false}
-                                                    size="medium"
-                                                    icone={<SearchIcon />}
-                                                    color="error"
-                                                    style={{ width: "100%" }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 mb-4  d-inline-block h-100">
-                                        <div className="card bg-preto text-white">
-                                            <ButtonIcon
-                                                type="button"
-                                                icone={<SettingsSuggestIcon />}
-                                                color="inherit"
-                                                size="large"
-                                                disabled={false}
-                                            />
-                                            <div className="card-body">
-                                                <h5 className="card-title text-center">BOT para suporte ao cliente via WhatsApp</h5>
-                                                <ButtonComponente
-                                                    type="button"
-                                                    variant="contained"
-                                                    texto="Saiba Mais"
-                                                    disabled={false}
-                                                    size="medium"
-                                                    icone={<SearchIcon />}
-                                                    color="error"
-                                                    style={{ width: "100%" }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 mb-4">
+                                    <div className="col-md-4 mb-4 m-auto">
                                         <div className="card bg-preto text-white">
                                             <ButtonIcon
                                                 type="button"
@@ -98,7 +50,15 @@ function Home() {
                                                 disabled={false}
                                             />
                                             <div className="card-body">
-                                                <h5 className="card-title text-center">IA Personalizada para atendimento mais dinâmico</h5>
+                                                <h5 className="card-title text-center">
+                                                    Crie um bot para vendas e atendimento ao suporte, tudo integrado no seu WhatsApp.
+                                                </h5>
+                                                <h5 className="card-title text-center">
+                                                    Ofereça uma experiência completa para seus clientes, com um bot que realiza vendas dos produtos, diretamente no WhatsApp. faça sua loja direto pelo WhatsApp.
+                                                </h5>
+                                                <h5 className="card-title text-center">
+                                                    Disponibilize criação de contas e perfil de clientes via WhatsApp, além de integrar respostas automaticas ao bot para suporte ao cliente.
+                                                </h5>
                                                 <ButtonComponente
                                                     type="button"
                                                     variant="contained"
