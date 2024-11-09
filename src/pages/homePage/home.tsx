@@ -6,7 +6,25 @@ import ButtonIcon from "../../globalComponents/buttonIcon";
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import Footer from "../../globalComponents/footer";
+import InputPadrao from "../../globalComponents/inputPadrao";
+import { useState } from "react";
+import formulario from "./interfaces/formulario";
 function Home() {
+    const styleEmailFormulario: React.CSSProperties = {
+        width: "100%",
+        color: "white"
+    }
+    const [formulario, setFomulario] = useState<formulario>({
+        nome: "",
+        email: "",
+        texto: ""
+    })
+    function setValuesFormulario(propriedade: string, evento: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+        setFomulario({
+            ...formulario,
+            [propriedade]: evento.target.value
+        })
+    }
     return (
         <div>
             <NavbarHomePage />
@@ -97,7 +115,68 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <div className="container-fluid mt-3">
+                <div className="card">
+                    <div className="card-body">
+                        <div className="row">
+                            <div className="col-sm col-md-12 col-lg-12">
+                                <p className="text-center">Você pode entrar em contato via formulário para mais detalhes</p>
+                            </div>
+
+                        </div>
+                        <div className="row mt-3">
+                            <div className="col-sm col-md-6 col-lg-6 m-auto">
+                                <div className="col-sm col-md-7 col-lg-7">
+                                    <InputPadrao
+                                        size="small"
+                                        label="Nome Completo"
+                                        variant="outlined"
+                                        value={formulario.nome}
+                                        onchange={function (e) {
+                                            setValuesFormulario("nome", e)
+                                        }}
+                                        disabled={false}
+                                        color="primary"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row mt-1">
+                            <div className="col-sm col-md-6 col-lg-6 m-auto">
+                                <InputPadrao
+                                    size="small"
+                                    label="E-mail para contato"
+                                    variant="outlined"
+                                    value={formulario.email}
+                                    onchange={function (e) {
+                                        setValuesFormulario("email", e)
+                                    }}
+                                    disabled={false}
+                                    color="primary"
+                                />
+                            </div>
+                        </div>
+                        <div className="row mt-1">
+                            <div className="col-sm col-md-6 col-lg-6 m-auto">
+                                <InputPadrao
+                                    size="small"
+                                    label="Digite aqui sua dúvida..."
+                                    variant="outlined"
+                                    value={formulario.texto}
+                                    multiline={true}
+                                    rows={10}
+                                    onchange={function (e) {
+                                        setValuesFormulario("texto", e)
+                                    }}
+                                    disabled={false}
+                                    color="primary"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Footer />
         </div>
     )
 }
