@@ -5,6 +5,7 @@ import InsightsIcon from '@mui/icons-material/Insights';
 import ButtonIcon from "../../globalComponents/buttonIcon";
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import Footer from "../../globalComponents/footer";
 function Home() {
     return (
         <div>
@@ -96,6 +97,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
