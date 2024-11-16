@@ -27,13 +27,13 @@ function Home() {
             <NavbarHomePage />
             <div className="container-fluid mt-3">
                 <div className="card">
+                    <section className="bg-preto text-white text-center py-5">
+                        <div className="container">
+                            <h1>Bem-vindo à FAQEase!</h1>
+                            <p>Conheça nossos produtos para automatizar o seu negócio.</p>
+                        </div>
+                    </section>
                     <div className="card-body">
-                        <section className="bg-preto text-white text-center py-5">
-                            <div className="container">
-                                <h1>Bem-vindo à FAQEase!</h1>
-                                <p>Conheça nossos produtos para automatizar o seu negócio.</p>
-                            </div>
-                        </section>
                         <section id="produtos" className="py-5">
                             <div className="container">
                                 <p className="text-center">Nossas automatizações são especializadas em interações via WhatsApp. Obtenha a licença de acesso ao bot para desbloquear as funcionalidades.</p>
