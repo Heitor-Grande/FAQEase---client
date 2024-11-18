@@ -3,7 +3,7 @@ function NavbarHomePage() {
     return (
         <nav className="navbar navbar-dark bg-preto">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">FAQEase</a>
+                <a className="navbar-brand" href="/">GSD</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>

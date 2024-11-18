@@ -29,7 +29,7 @@ function Home() {
                 <div className="card">
                     <section className="bg-preto text-white text-center py-5">
                         <div className="container">
-                            <h1>Bem-vindo à FAQEase!</h1>
+                            <h1>Bem-vindo à GSD!</h1>
                             <p>Conheça nossos produtos para automatizar o seu negócio.</p>
                         </div>
                     </section>
@@ -42,6 +42,9 @@ function Home() {
                                 <div className="row">
                                     <div className="col-md-4 mb-4 m-auto">
                                         <div className="card bg-preto text-white">
+                                            <div className="card-header">
+                                                <h5 className="fs-4">FAQEaser</h5>
+                                            </div>
                                             <ButtonIcon
                                                 type="button"
                                                 icone={<PrecisionManufacturingIcon />}
@@ -51,14 +54,17 @@ function Home() {
                                             />
                                             <div className="card-body">
                                                 <h5 className="card-title text-center">
-                                                    Crie um bot para vendas e atendimento ao suporte, tudo integrado no seu WhatsApp.
+                                                    Chega de complicação!
                                                 </h5>
                                                 <h5 className="card-title text-center">
-                                                    Ofereça uma experiência completa para seus clientes, com um bot que realiza vendas dos produtos, diretamente no WhatsApp. faça sua loja direto pelo WhatsApp.
+                                                    Agora seus clientes podem criar contas e fazer pedidos diretamente pelo WhatsApp,
+                                                    de forma prática e rápida.
                                                 </h5>
                                                 <h5 className="card-title text-center">
-                                                    Disponibilize criação de contas e perfil de clientes via WhatsApp, além de integrar respostas automaticas ao bot para suporte ao cliente.
+                                                    Automatize o atendimento,
+                                                    economize tempo e ofereça uma experiência incrível para o seu público.
                                                 </h5>
+                                                <br />
                                                 <ButtonComponente
                                                     type="button"
                                                     variant="contained"
@@ -79,6 +85,7 @@ function Home() {
                 </div>
             </div>
             <div className="container-fluid mt-3">
+                <p className="text-center mb-3">Quer saber como funciona? Fale com a gente e leve sua comunicação para o próximo nível!</p>
                 <form action="">
                     <div className="card">
                         <div className="card-body">
@@ -86,7 +93,6 @@ function Home() {
                                 <div className="col-sm col-md-12 col-lg-12">
                                     <p className="text-center">Você pode entrar em contato via formulário para mais detalhes</p>
                                 </div>
-
                             </div>
                             <div className="row mt-3">
                                 <div className="col-sm col-md-6 col-lg-6 m-auto">
